@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animation styles for the ChattrLoader components */
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 0.15s;
+  }
+  .animation-delay-400 {
+    animation-delay: 0.3s;
+  }
+}
+/* Dot styles for the ChattrLoader components */
+.chattrDotDefault {
+  @apply mx-0.5 h-[6px] w-[6px] rounded-full bg-chattrWhite;
+}
+
+.chattrDotMinimalist {
+  @apply mx-0.5 h-[6px] w-[6px] rounded-full bg-chattrSecondary dark:bg-chattrSecondaryDark;
+}
