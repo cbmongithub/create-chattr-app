@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
-    "start": "next start",
+    "prod": "next start",
     "lint": "next lint"
   },
   "dependencies": {

@@ -13,13 +13,21 @@ A next js chattr boilerplate. Built with Nextjs, Chattr, Tailwindcss, OpenAI, an
 
 # Installation
 
+**NEW** You can now use `npx create-chattr-app` for installation of files and dependencies automatically:
+
+```bash
+npx create-chattr-app your-app-name
+```
+
+Or you can clone it, and manually install dependencies:
+
 ```bash
 git clone https://github.com/christianbmartinez/create-chattr-app.git
 ```
 
 # Usage
 
-First, install all dependencies by running:
+You can skip this step if you are using `npx create-chattr-app`. Otherwise, install all dependencies by running:
 
 ```bash
 npm install
@@ -54,7 +62,7 @@ npm run dev
 For running the app in production mode, use:
 
 ```bash
-npm start
+npm run prod
 ```
 
 You can view the app locally at http://localhost:3000/
