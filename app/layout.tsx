@@ -6,7 +6,7 @@ import {
   ThemeProvider,
   Background,
   Navigation,
-  QuickstartChattrbot,
+  DefaultChattrbot,
   Footer,
 } from '@/components'
 
@@ -35,7 +35,7 @@ export default function RootLayout({
           <Background />
           <div className='mt-[116px]'></div>
           <main className='flex-auto'>{children}</main>
-          <QuickstartChattrbot />
+          <DefaultChattrbot />
           <Footer />
         </ThemeProvider>
       </body>

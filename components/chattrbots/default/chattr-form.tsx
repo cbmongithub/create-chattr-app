@@ -16,7 +16,7 @@ export default function ChattrForm({
   return (
     <form
       onSubmit={event => sendMessage(event)}
-      className='z-40 flex h-16 items-center justify-between rounded-b-chattrRoundedLarge border-t border-chattrGray bg-chattrBackgroundMuted px-2 py-2.5 dark:border-chattrTextDark/10 dark:bg-chattrPitchBlack'>
+      className='z-40 flex h-16 items-center justify-between rounded-b-chattrRoundedLarge border-t border-chattrGray bg-chattrWhite px-2 py-2.5 dark:border-chattrTextDark/10 dark:bg-chattrPitchBlack'>
       <input
         className='h-10 min-w-0 flex-auto appearance-none rounded-chattrRoundedMedium border border-chattrGray bg-chattrWhite px-3 py-2 font-light text-chattrText placeholder:text-chattrSecondary/70 focus:border-chattrPrimary focus:outline-none dark:border-chattrTextDark/10 dark:bg-chattrBlack dark:text-chattrTextDark dark:placeholder:text-chattrTextDark/50 dark:focus:border-chattrPrimaryDark sm:text-sm'
         type='text'

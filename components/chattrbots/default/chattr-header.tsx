@@ -10,7 +10,7 @@ function ChattrHeader({
   chattrBotName?: string
 }) {
   return (
-    <div className='z-40 flex h-14 w-full items-center justify-between rounded-t-chattrRoundedLarge border-b border-chattrGray bg-chattrBackgroundMuted px-3 py-2 dark:border-chattrTextDark/10 dark:bg-chattrPitchBlack'>
+    <div className='z-40 flex h-14 w-full items-center justify-between rounded-t-chattrRoundedLarge border-b border-chattrGray bg-chattrWhite px-3 py-2 dark:border-chattrTextDark/10 dark:bg-chattrPitchBlack'>
       <div className='ml-1 flex flex-[0.5] justify-start'>
         <h3 className='text-sm font-semibold tracking-wide text-chattrText dark:text-chattrTextDark'>
           {chattrBotName}

@@ -5,7 +5,7 @@ export default function ChattrIcon({ toggle }: { toggle: () => void }) {
     <div className='fixed bottom-4 right-4 z-20 flex items-center justify-center md:flex-1'>
       <button
         onClick={toggle}
-        className='group rounded-full bg-chattrWhite p-3 shadow shadow-chattrText/5 ring-1 ring-chattrBlack/5 dark:bg-chattrBlack dark:ring-chattrWhite/5 dark:hover:ring-chattrWhite/10'
+        className='group rounded-full bg-chattrWhite/90 p-3 shadow-lg shadow-chattrText/5 ring-1 ring-chattrBlack/5 dark:bg-chattrText dark:ring-chattrWhite/10 dark:hover:ring-chattrWhite/20'
         type='button'
         role='button'
         aria-label='Toggle Chatbot'>
