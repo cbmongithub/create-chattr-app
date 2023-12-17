@@ -11,6 +11,10 @@ A next js chattr boilerplate. Built with Nextjs, Chattr, Tailwindcss, OpenAI, an
 - Two routes are setup, one for basic chatgpt functionality and the other for chat gpt and function calling.
 - Default theme uses the `api/chatgpt` route, while the minimalist theme uses the `api/function-calling` route as starting examples.
 
+# Demo
+
+You can view a live demo on [codesandbox](https://githubbox.com/christianbmartinez/create-chattr-app)! Just enter in your `OPENAI_API_KEY` in the `.env.development.local` file. For function calling with the Minimalist Chattrbot, you will also need a `WEATHER_APP_ID` and a `REPLICATE_API_TOKEN`.
+
 # Installation
 
 **NEW** You can now use `npx create-chattr-app` for installation of files and dependencies automatically:
