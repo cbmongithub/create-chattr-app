@@ -1,12 +1,7 @@
-import { memo, useEffect, useRef } from 'react'
+import { memo } from 'react'
 
 import { ChattrMessages, ChattrLoader } from '.'
-
-type ChattrMessages = {
-  role: 'user' | 'assistant'
-  key?: string
-  content?: string
-}
+import { useScroll, type ChattrMessage } from 'chattr'
 
 function ChattrFeed({
   messages,
@@ -14,18 +9,12 @@ function ChattrFeed({
   chattrBotName,
   loading,
 }: {
-  messages: ChattrMessages[]
+  messages: ChattrMessage[]
   userName?: string
   chattrBotName?: string
   loading?: boolean
 }) {
-  const ref = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    if (ref.current) {
-      ref.current.scrollTop = ref.current.scrollHeight
-    }
-  }, [messages])
+  const ref = useScroll(messages)
 
   return (
     <div

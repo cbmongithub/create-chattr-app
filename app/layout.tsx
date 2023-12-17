@@ -6,8 +6,8 @@ import {
   ThemeProvider,
   Background,
   Navigation,
-  DefaultChattrbot,
   Footer,
+  DefaultChattrbot,
 } from '@/components'
 
 export const metadata: Metadata = {

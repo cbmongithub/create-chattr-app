@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { useChattr } from 'chattr'
+import { useChattr, type ChattrMessage } from 'chattr'
 
 import {
   ChattrContainer,
@@ -10,12 +10,6 @@ import {
   ChattrHeader,
   ChattrOpenButton,
 } from './chattrbots/default'
-
-type ChattrMessage = {
-  role: 'user' | 'assistant'
-  key?: string
-  content?: string
-}
 
 export default function DefaultChattrbot() {
   const { isOpen, toggle } = useChattr()

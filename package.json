@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "chattr": "^1.0.7",
+    "chattr": "^1.1.2",
     "dayjs": "^1.11.10",
     "framer-motion": "^10.16.16",
     "geist": "^1.2.0",

@@ -1,12 +1,7 @@
 import { memo } from 'react'
+import { type ChattrMessage } from 'chattr'
 
 import { ChattrAssistantMessage, ChattrUserMessage } from '.'
-
-type ChattrMessage = {
-  role: 'user' | 'assistant'
-  key?: string
-  content?: string
-}
 
 function ChattrMessages({
   message: { content, role, key },

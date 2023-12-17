@@ -1,4 +1,5 @@
 import { memo } from 'react'
+import { type ChattrMessage } from 'chattr'
 
 import {
   ChattrAssistantMessage,
@@ -7,24 +8,6 @@ import {
   ChattrAssistantWeather,
   ChattrAssistantVideo,
 } from '.'
-
-type ChattrMessage = {
-  role: 'user' | 'assistant'
-  key?: string
-  content?: string
-  ui: string
-  data?: {
-    temperature: string
-    celcius: string
-    location: string
-    description: string
-    humidity: string
-    wind: string
-    clouds: string
-    state: string
-    url: string
-  }
-}
 
 function ChattrMessages({
   message: { content, role, key, ui, data },

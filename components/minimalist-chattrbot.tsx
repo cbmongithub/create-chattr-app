@@ -1,7 +1,7 @@
 'use client'
 
-import React from 'react'
-import { useChattr } from 'chattr'
+import { useState } from 'react'
+import { useChattr, type ChattrMessage } from 'chattr'
 
 import {
   ChattrContainer,
@@ -11,30 +11,12 @@ import {
   ChattrOpenButton,
 } from './chattrbots/minimalist'
 
-type ChattrMessage = {
-  role: 'user' | 'assistant'
-  key?: string
-  content?: string
-  ui: string
-  data?: {
-    temperature: string
-    celcius: string
-    location: string
-    description: string
-    humidity: string
-    wind: string
-    clouds: string
-    state: string
-    url: string
-  }
-}
-
 export default function MinimalistChattrbot() {
   const { isOpen, toggle } = useChattr()
   const chattrBotName = 'Chattrbot'
-  const [loading, setLoading] = React.useState(false)
-  const [message, setMessage] = React.useState('')
-  const [messages, setMessages] = React.useState<ChattrMessage[]>([
+  const [loading, setLoading] = useState(false)
+  const [message, setMessage] = useState('')
+  const [messages, setMessages] = useState<ChattrMessage[]>([
     {
       ui: 'default',
       content: `Hey! Thanks for visiting. I'm ${chattrBotName}, you can ask me anything!`,

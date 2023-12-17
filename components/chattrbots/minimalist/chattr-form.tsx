@@ -1,11 +1,4 @@
-type ChattrForm = {
-  setMessage: React.Dispatch<React.SetStateAction<string>>
-  sendMessage: (
-    event: React.MouseEvent | React.KeyboardEvent | React.FormEvent
-  ) => void
-  message: string
-  loading: boolean
-}
+import { type ChattrForm } from 'chattr'
 
 export default function ChattrForm({
   setMessage,
