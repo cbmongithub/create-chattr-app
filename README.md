@@ -10,6 +10,7 @@ A next js chattr boilerplate. Built with Nextjs, Chattr, Tailwindcss, OpenAI, an
 - Minimalist landing page example that has the minimalist chattrbot, menu, and navigation installed.
 - Two routes are setup, one for basic chatgpt functionality and the other for chat gpt and function calling.
 - Default theme uses the `api/chatgpt` route, while the minimalist theme uses the `api/function-calling` route as starting examples.
+- Re engineered `spotlight` from tailwind ui for this example. Please visit tailwindui to purchase the full theme.
 
 # Demo
 
