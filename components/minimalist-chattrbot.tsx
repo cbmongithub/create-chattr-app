@@ -1,7 +1,7 @@
 'use client'
 
+import { type ChattrMessageProps, useChattr } from 'chattr'
 import { useState } from 'react'
-import { useChattr, type ChattrMessage } from 'chattr'
 
 import {
   ChattrContainer,
@@ -16,7 +16,7 @@ export default function MinimalistChattrbot() {
   const chattrBotName = 'Chattrbot'
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState('')
-  const [messages, setMessages] = useState<ChattrMessage[]>([
+  const [messages, setMessages] = useState<ChattrMessageProps[]>([
     {
       ui: 'default',
       content: `Hey! Thanks for visiting. I'm ${chattrBotName}, you can ask me anything!`,
@@ -50,7 +50,7 @@ export default function MinimalistChattrbot() {
       }),
     })
 
-    let result = await response.json()
+    const result = await response.json()
 
     if (result.ok) {
       if (result.content.text) {

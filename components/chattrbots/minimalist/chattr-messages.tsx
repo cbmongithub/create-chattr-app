@@ -1,18 +1,18 @@
+import type { ChattrMessageProps } from 'chattr'
 import { memo } from 'react'
-import { type ChattrMessage } from 'chattr'
 
 import {
-  ChattrAssistantMessage,
-  ChattrUserMessage,
   ChattrAssistantImage,
-  ChattrAssistantWeather,
+  ChattrAssistantMessage,
   ChattrAssistantVideo,
+  ChattrAssistantWeather,
+  ChattrUserMessage,
 } from '.'
 
 function ChattrMessages({
   message: { content, role, key, ui, data },
 }: {
-  message: ChattrMessage
+  message: ChattrMessageProps
 }) {
   return (
     <div className='px-4 py-2'>

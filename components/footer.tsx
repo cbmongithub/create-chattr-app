@@ -15,7 +15,7 @@ export default function Footer() {
                     {navLinks.map((link, i) => {
                       return (
                         <Link
-                          key={`footer_${i}_`}
+                          key={`footer_${i+1}_`}
                           className='transition hover:text-teal-500 dark:hover:text-teal-400'
                           href={link.href}>
                           {link.text}

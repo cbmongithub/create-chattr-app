@@ -1,25 +1,20 @@
 'use client'
 
-import Link from 'next/link'
-
 import { navLinks } from '@/constants'
+import Link from 'next/link'
+import { useState } from 'react';
 
 type Toggle = {
-  isOpen?: boolean
-  toggle: () => void
+  onOpen?: boolean
 }
 
-export default function Menu({ toggle, isOpen }: Toggle) {
+export default function Menu({ onOpen }: Toggle) {
+  const [isOpen, setIsOpen] = useState(onOpen);
+  const toggle = () => {
+    setIsOpen((prev) => !prev);
+  };
   return (
     <>
-      <div
-        onClick={toggle}
-        aria-hidden='true'
-        className={
-          isOpen
-            ? `fixed inset-0 z-40 bg-zinc-800/40 opacity-100 backdrop-blur-sm transition-all duration-500 dark:bg-black/80`
-            : `fixed inset-0 z-0 bg-zinc-800/40 opacity-0 backdrop-blur-sm transition-all duration-500 dark:bg-black/80`
-        }></div>
       <div
         className={
           isOpen
@@ -31,7 +26,6 @@ export default function Menu({ toggle, isOpen }: Toggle) {
             onClick={toggle}
             className='-m-1 p-1'
             type='button'
-            role='button'
             aria-label='Close menu'>
             <svg
               viewBox='0 0 24 24'
@@ -43,7 +37,7 @@ export default function Menu({ toggle, isOpen }: Toggle) {
                 stroke='currentColor'
                 strokeWidth='1.5'
                 strokeLinecap='round'
-                strokeLinejoin='round'></path>
+                strokeLinejoin='round'/>
             </svg>
           </button>
           <h2 className='text-sm font-medium text-zinc-600 dark:text-zinc-400'>
@@ -54,7 +48,7 @@ export default function Menu({ toggle, isOpen }: Toggle) {
           <ul className='-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300'>
             {navLinks.map((link, i) => {
               return (
-                <li key={`menu_${i}_`}>
+                <li key={`menu_${i+1}_`}>
                   <Link
                     className='block py-2 hover:text-teal-500 dark:hover:text-teal-400'
                     href={link.href}>

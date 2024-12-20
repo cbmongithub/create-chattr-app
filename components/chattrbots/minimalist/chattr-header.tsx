@@ -33,6 +33,7 @@ export default function ChattrHeader({
         </div>
       </div>
       <button
+        type='button'
         onClick={toggle}
         className='ml-auto inline-flex h-5 w-5 items-start justify-end text-sm font-medium hover:opacity-60'>
         <ChattrCloseIcon />

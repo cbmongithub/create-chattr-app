@@ -1,5 +1,5 @@
-import { NextRequest, NextResponse } from 'next/server'
-import { get_current_weather, create_image, create_video } from 'chattr'
+import { create_image, create_video, get_current_weather } from 'chattr'
+import { type NextRequest, NextResponse } from 'next/server'
 
 export async function POST(req: NextRequest) {
   try {
@@ -22,9 +22,9 @@ export async function POST(req: NextRequest) {
           role: 'system',
           content: `
           You are a chatbot named ${chattrBotName}.
-          Respond with any information that the user requests. 
+          Respond with any information that the user requests.
           You can view the entire chat history here, where your role is the assistant, and the users role is user: ${chatHistory}.
-          This history is helpful if you need to recall any information or understand context from chat. 
+          This history is helpful if you need to recall any information or understand context from chat.
           Use a professional tone in your responses.`,
         },
         {
@@ -145,7 +145,9 @@ export async function POST(req: NextRequest) {
             },
           },
         })
-      } else if (functionCall === 'create_image') {
+      }
+
+      if (functionCall === 'create_image') {
         const { description, url } = await create_image(args.description)
 
         return NextResponse.json({
@@ -158,7 +160,9 @@ export async function POST(req: NextRequest) {
             },
           },
         })
-      } else if (functionCall === 'create_video') {
+      }
+
+      if (functionCall === 'create_video') {
         const { description, url } = await create_video(args.description)
 
         return NextResponse.json({
@@ -170,12 +174,6 @@ export async function POST(req: NextRequest) {
               url: url,
             },
           },
-        })
-      } else {
-        return NextResponse.json({
-          ok: false,
-          error:
-            'Looks like something went wrong while generating that. Please try again! If the problem persists, let us know!',
         })
       }
     } else {

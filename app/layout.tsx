@@ -1,13 +1,13 @@
-import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
+import type { Metadata } from 'next'
 import './globals.css'
 
 import {
-  ThemeProvider,
   Background,
-  Navigation,
-  Footer,
   DefaultChattrbot,
+  Footer,
+  Navigation,
+  ThemeProvider,
 } from '@/components'
 
 export const metadata: Metadata = {
@@ -33,7 +33,7 @@ export default function RootLayout({
           disableTransitionOnChange>
           <Navigation />
           <Background />
-          <div className='mt-[116px]'></div>
+          <div className='mt-[116px]'/>
           <main className='flex-auto'>{children}</main>
           <DefaultChattrbot />
           <Footer />

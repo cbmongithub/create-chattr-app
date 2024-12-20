@@ -1,11 +1,11 @@
-import { type ChattrForm } from 'chattr'
+import type { ChattrFormProps } from 'chattr'
 
 export default function ChattrForm({
   setMessage,
   sendMessage,
   message,
   loading,
-}: ChattrForm) {
+}: ChattrFormProps) {
   return (
     <form
       onSubmit={event => sendMessage(event)}

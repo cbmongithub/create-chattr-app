@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { type NextRequest, NextResponse } from 'next/server'
 
 export async function POST(req: NextRequest) {
   try {
@@ -21,9 +21,9 @@ export async function POST(req: NextRequest) {
           role: 'system',
           content: `
           You are a chatbot named ${chattrBotName}.
-          Respond with any information that the user requests. 
+          Respond with any information that the user requests.
           You can view the entire chat history here, where your role is the assistant, and the users role is user: ${chatHistory}.
-          This history is helpful if you need to recall any information or understand context from chat. 
+          This history is helpful if you need to recall any information or understand context from chat.
           Use a professional tone in your responses.`,
         },
         {

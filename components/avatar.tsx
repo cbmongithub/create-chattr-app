@@ -1,7 +1,7 @@
 'use client'
 
-import Link from 'next/link'
 import { motion, useScroll, useTransform } from 'framer-motion'
+import Link from 'next/link'
 
 export default function Avatar() {
   const { scrollYProgress } = useScroll()
@@ -13,7 +13,7 @@ export default function Avatar() {
 
   return (
     <>
-      <div className='order-last mt-[calc(theme(spacing.16)-theme(spacing.3))]'></div>
+      <div className='order-last mt-[calc(theme(spacing.16)-theme(spacing.3))]' />
       <div className='relative top-0 order-last -mb-3 pt-3 sm:px-8'>
         <div className='mx-auto w-full max-w-7xl lg:px-8'>
           <div className='px-4 sm:px-8 lg:px-12'>
@@ -31,7 +31,7 @@ export default function Avatar() {
                       scale: scaleValue,
                     }}
                     src='/me.webp'
-                    alt='Christian B. Martinez Avatar Photo'
+                    alt='Christian B. Martinez Avatar'
                     width={70}
                     height={70}
                     className='z-10 h-16 w-16 rounded-full'
