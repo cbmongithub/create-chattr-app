@@ -14,7 +14,7 @@ export default function Avatar() {
   return (
     <>
       <div className='order-last mt-[calc(theme(spacing.16)-theme(spacing.3))]'></div>
-      <div className='relative top-0 order-last -mb-3 pt-3 sm:px-8'>
+      <div className='absolute top-0 order-last -mb-3 pt-3 sm:px-8'>
         <div className='mx-auto w-full max-w-7xl lg:px-8'>
           <div className='px-4 sm:px-8 lg:px-12'>
             <div className='mx-auto max-w-2xl lg:max-w-5xl'>

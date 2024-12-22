@@ -1,4 +1,4 @@
-import { ChattrAssistantMessage } from '.'
+import ChattrAssistantMessage from './chattr-assistant-message'
 
 export default function ChattrAssistantVideo({
   key,

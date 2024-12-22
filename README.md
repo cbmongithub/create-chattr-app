@@ -5,11 +5,10 @@
 
 A next js chattr boilerplate. Built with Nextjs, Chattr, Tailwindcss, OpenAI, and Typescript.
 
-- Ships with chattr's default theme, and chattr's minimalist theme (originally styled by [shadcn](https://ui.shadcn.com/themes)) allowing for full customization over every component chattr offers.
+- Ships with a minimalist theme (originally styled by [shadcn](https://ui.shadcn.com/themes)) allowing for full customization over every component chattr offers.
 - Full theme support for light/dark mode via next themes.
-- Minimalist landing page example that has the minimalist chattrbot, menu, and navigation installed.
+- Minimalist landing page (Re engineered `spotlight` theme) example that has the minimalist chattrbot, menu, and navigation installed.
 - Two routes are setup, one for basic chatgpt functionality and the other for chat gpt and function calling.
-- Default theme uses the `api/chatgpt` route, while the minimalist theme uses the `api/function-calling` route as starting examples.
 
 # Demo
 
@@ -81,8 +80,8 @@ Contributing is welcomed! Please submit a pull request.
 
 # Questions
 
-Feel free to [email](mailto:hello@christianbmartinez.com?subject=[GitHub]%20Create%20React%20App) me with any questions or view [my github profile](https://github.com/christianbmartinez) to check out my other repos!
+Feel free to [email](mailto:hello@christianbmartinez.com?subject=[GitHub]%20Create%20React%20App) me with any questions or view [my github profile](https://github.com/cbmongithub) to check out my other repos!
 
 # Sponsors
 
-If you like the project and it adds value to you, feel free to [sponsor me](https://github.com/sponsors/christianbmartinez) if you'd like!
+If you like the project and it adds value to you, feel free to [sponsor me](https://github.com/sponsors/cbmongithub) if you'd like!

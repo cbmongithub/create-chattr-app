@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /package-lock.json
+/bun.lockb
 /.pnp
 .pnp.js
 .yarn/install-state.gz
@@ -11,7 +12,7 @@
 /coverage
 
 # next.js
-/.next/
+/.chattr-app/
 /out/
 
 # production

@@ -1,21 +1,67 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* Animation styles for the ChattrLoader components */
-@layer utilities {
-  .animation-delay-200 {
-    animation-delay: 0.15s;
+@theme {
+  /* Colors */
+  --color-black: #000;
+  --color-white: #fff;
+
+  /* Chattr Colors */
+  --color-chattrWhite: oklch(0.8 0 0);
+  --color-chattrBlack: oklch(0 0 0);
+  --color-chattrPitchBlack: oklch(0 0 0);
+  --color-chattrPrimary: oklch(0.8 0 0);
+  --color-chattrPrimaryDark: oklch(0.8 0 0);
+  --color-chattrSecondary: oklch(0.8 0 0 / 0.8);
+  --color-chattrSecondaryDark: oklch(0.4 0 0 / 0.6);
+  --color-chattrGray: oklch(0.8 0 0 / 0.9);
+  --color-chattrGrayDark: oklch(0.9 0 0 / 0.15);
+  --color-chattrText: oklch(0.2 0 0);
+  --color-chattrTextDark: oklch(0.95 0 0);
+  --color-chattrBackgroundMuted: oklch(0.95 0 0 / 0.7);
+
+  /* Radii */
+  --radius-chattrRoundedSmall: 0.5rem;
+  --radius-chattrRoundedMedium: 0.85rem;
+  --radius-chattrRoundedLarge: 1rem;
+
+  /* Animations */
+  --animate-chattrLoader: chattrLoader 0.5s infinite alternate;
+  --animate-heartBeat: heartBeat 1.5s ease 0s infinite alternate;
+
+  @keyframes chattrLoader {
+    from {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      opacity: 0.25;
+      transform: translate3d(0, -0.2rem, 0);
+    }
   }
-  .animation-delay-400 {
-    animation-delay: 0.3s;
+
+  @keyframes heartBeat {
+    0%, 50%, 100% {
+      transform: scale(1, 1);
+    }
+    30%, 80% {
+      transform: scale(0.92, 0.95);
+    }
   }
-}
-/* Dot styles for the ChattrLoader components */
-.chattrDotDefault {
-  @apply mx-0.5 h-[6px] w-[6px] rounded-full bg-chattrWhite;
 }
 
-.chattrDotMinimalist {
-  @apply mx-0.5 h-[6px] w-[6px] rounded-full bg-chattrSecondary dark:bg-chattrSecondaryDark;
+/* Loading Dot */
+.chattr-dot {
+  margin-left: 0.125rem;
+  margin-right: 0.125rem;
+  height: 6px;
+  width: 6px;
+  border-radius: 9999px;
+  background-color: var(--chattrSecondary);
 }
+@media (prefers-color-scheme: dark) {
+  .chattr-dot {
+    background-color: var(--chattrSecondaryDark);
+  }
+}
+
+

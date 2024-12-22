@@ -3,7 +3,9 @@
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
 
-import { Avatar, Menu } from '.'
+import Avatar from './avatar'
+import Menu from './menu'
+
 import { navLinks } from '@/constants'
 import useMenu from '@/hooks/use-menu'
 
@@ -21,7 +23,7 @@ export default function Navigation() {
         isOpen={isOpen}
         toggle={toggle}
       />
-      <nav className='relative z-10 -mb-[116px] flex h-[180px] flex-none flex-col'>
+      <nav className='relative z-10 -pb-[116px] flex h-[180px] flex-none flex-col'>
         <Avatar />
         <div className='sticky top-0 z-10 h-16 pt-6'>
           <div className='top-[116px] w-full sm:px-8'>

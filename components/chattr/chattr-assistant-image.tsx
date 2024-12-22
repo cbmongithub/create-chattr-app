@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { ChattrAssistantMessage } from '.'
+import ChattrAssistantMessage from './chattr-assistant-message'
 
 export default function ChattrAssistantImage({
   key,

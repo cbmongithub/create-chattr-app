@@ -1,14 +1,14 @@
 import Image from 'next/image'
 
-import { ChattrCloseIcon } from '.'
+import ChattrCloseIcon from './chattr-close-icon'
 
 export default function ChattrHeader({
   chattrBotName,
-  role,
+  userRole,
   toggle,
 }: {
   chattrBotName: string
-  role: string
+  userRole: string
   toggle: () => void
 }) {
   return (
@@ -28,7 +28,7 @@ export default function ChattrHeader({
             {chattrBotName}
           </p>
           <p className='text-sm font-light text-chattrSecondary dark:text-chattrSecondaryDark'>
-            {role}
+            {userRole}
           </p>
         </div>
       </div>

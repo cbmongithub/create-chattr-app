@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import dayjs from 'dayjs'
 
-import { ChattrAssistantMessage } from '.'
+import ChattrAssistantMessage from './chattr-assistant-message'
 
 export default function ChattrAssistantWeather({
   key,
